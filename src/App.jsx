@@ -16,7 +16,6 @@ function App() {
     <div>
       <h1>학생 목록</h1>
       <FilterButtons
-        filteredStudents={filteredStudents}
         setFilteredStudents={setFilteredStudents}
         initialStudents={initialStudents}
       />
