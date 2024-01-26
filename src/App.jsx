@@ -9,7 +9,7 @@ function App() {
   ];
 
   // TODO: filter를 사용하여 18세 이상의 학생들만 선택하세요.
-  const filteredStudents = students.filter((student) => student.age > 18);
+  const filteredStudents = students.filter((student) => student.age >= 18);
 
   return (
     <div>
@@ -20,16 +20,16 @@ function App() {
             <h2>{student.name}</h2>
             <h3>{student.age}</h3>
             <h3>{student.grade}</h3>
+            <button
+              onClick={() => {
+                alert(`age : ${student.age}, grade: ${student.grade}`);
+              }}
+            >
+              click
+            </button>
           </li>
         ))}
         {/* TODO: 학생이름을 클릭하면 나이와 점수가 alert 돼야 해요.*/}
-        <button
-          onClick={() => {
-            alert("hi");
-          }}
-        >
-          click
-        </button>
       </ul>
     </div>
   );
